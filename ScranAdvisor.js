@@ -16,12 +16,14 @@ ScranAdvisor.prototype.findByName = function (name){
 
 //Return an array containing each restaurant's name 
 ScranAdvisor.prototype.getEachName = function (){
-
+    return this.restaurants.map(restaurant => restaurant.name);
 };
 
 
 //Find all the restaurants from given city(pass in the city name, e.g. "Glasgow" should return 4 restaurants)
-ScranAdvisor.prototype.
+ScranAdvisor.prototype.findByCity = function (city){
+    return this.restaurants.filter(restaurant => restaurant.location.town === city);
+};
 
 
 module.exports = ScranAdvisor;

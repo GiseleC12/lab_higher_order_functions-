@@ -67,11 +67,11 @@ describe('ScranAdvisor', () => {
             "Gopal's Corner Victoria",
             'The Gordon Highlander'
           ]
-          const actual = null;
+          const actual = scranAdvisor.getEachName();
           expect(actual).toEqual(expected);
     })
 
-    test.skip('can find all restaurants from Glasgow', () => {
+    test('can find all restaurants from Glasgow', () => {
         const expected = [
             {
               id: 1,
@@ -118,7 +118,7 @@ describe('ScranAdvisor', () => {
               longitude: -4.255168672861043
             }
           ];
-          const actual = null;
+          const actual = scranAdvisor.findByCity('Glasgow');
           expect(actual).toEqual(expected);
     })
 
